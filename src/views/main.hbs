@@ -1,0 +1,28 @@
+<section id="services" class="services section-bg">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    {{#each posts}}
+                        <div class="col-md-3">
+                            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="icon"><i class="bx bi-facebook"></i></div>
+                                <h4><a target="_blank" href="{{this.permalink_url}}">{{this.title}}</a></h4>
+                                <p>{{this.message}}</p>
+                                <div class="row col-12">
+                                    {{#each this.hashTags}}
+                                        <div class="col-6">
+                                            <span class="badge-color badge-danger">{{this}}</span>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End Services Section -->
